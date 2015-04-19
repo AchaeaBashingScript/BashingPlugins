@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage/>
+    <TimerPackage/>
+    <AliasPackage>
+        <Alias isActive="yes" isFolder="no">
+            <name>toggle party announce</name>
+            <script>keneanung.bashing.announce = not keneanung.bashing.announce
+cecho(&quot;&lt;green&gt;keneanung:&lt;reset&gt; Party announce is now &lt;red&gt;&quot; .. ( keneanung.bashing.announce and &quot;on&quot; or &quot;off&quot;) .. &quot;&lt;reset&gt;.\n&quot;)</script>
+            <command></command>
+            <packageName></packageName>
+            <regex>^pt announce$</regex>
+        </Alias>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <Script isActive="yes" isFolder="no">
+            <name>partyannounce</name>
+            <packageName></packageName>
+            <script>-------------------------------------------------
+--         Put your Lua functions here.        --
+--                                             --
+-- Note that you can also use external Scripts --
+-------------------------------------------------
+function partyannounce(event, arg)
+	if keneanung.bashing.announce and arg then
+		send(&quot;pt Target &quot; .. arg )
+	end
+end</script>
+            <eventHandlerList>
+                <string>keneanung.bashing.targetList.firstChanged</string>
+            </eventHandlerList>
+        </Script>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>
