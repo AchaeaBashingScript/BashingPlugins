@@ -9,20 +9,20 @@ If you need help with any of them, you can contact me, but depending on my time 
 
 **THERE IS NO WARANTY THAT THE THINGS HERE DON'T BREAK ANYTHING.**
 
-Plugins ending with the `.lua` ending are plugins tha should be added via `add file` in te `kconfig bashing`. XML files are
+Plugins ending with the `.lua` ending are plugins tha should be added via `add file` in the `kconfig bashing`. XML files are
 Mudlet plugins.
 
 BashingPartyAnnounce.xml
 ------------------------
 
 - announces the ID of the target to the party when switching targets.
-- uses the events the basher omits.
+- uses the events the basher emits.
 - toggle on/off with `pt announce`
  
 ManuallyAddPossibleTarget.lua
 -----------------------------
 
-- allows to manually add a possible target to the priority list without killing it first
+- allows the the user to add a possible target to the priority list without killing it first
 - useful when hunting in a party in an area that has no prios yet
 - use the alias `kconfig bashing addTarget (id)` where id is the ID of type of denizen you want to add to the list
  
