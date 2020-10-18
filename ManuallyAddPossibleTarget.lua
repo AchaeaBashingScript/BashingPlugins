@@ -3,7 +3,7 @@ tempAlias("^kconfig bashing addTarget (.+)$", [[
     if item.id == matches[2]:match("%d+$") then
       keneanung.bashing.addPossibleTarget(item.name)
       return
-    elseif item.name == matches[2]:match("^%D+") then
+    elseif item.name:find(matches[2]:match("^%D+")) then
       keneanung.bashing.addPossibleTarget(item.name)
       return
     end
