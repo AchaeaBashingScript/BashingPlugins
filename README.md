@@ -24,7 +24,7 @@ ManuallyAddPossibleTarget.lua
 
 - allows the the user to add a possible target to the priority list without killing it first
 - useful when hunting in a party in an area that has no prios yet
-- use the alias `kconfig bashing addTarget (id)` where id is the ID of type of denizen you want to add to the list
+- use the alias `kconfig bashing addTarget [name|id]` where id is the ID of type of denizen you want to add to the list, or name is the name of the type of denizen you want to add to the list. There must be at least one of what you want to add to the list in your room.
  
 NoSystem.lua
 ------------
