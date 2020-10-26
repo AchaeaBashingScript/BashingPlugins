@@ -18,6 +18,7 @@ BashingPartyAnnounce.xml
 - announces the ID of the target to the party when switching targets.
 - uses the events the basher emits.
 - toggle on/off with `pt announce`
+- call a single target with `ptarg`
  
 ManuallyAddPossibleTarget.lua
 -----------------------------
