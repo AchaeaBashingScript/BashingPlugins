@@ -5,8 +5,6 @@
     <TimerPackage/>
     <AliasPackage>
         <Alias isActive="yes" isFolder="no">
-			<script>if keneanung.bashing.targetList[1] then 
-end</script>
             <name>toggle party announce</name>
             <script>keneanung.bashing.announce = not keneanung.bashing.announce
 cecho(&quot;&lt;green&gt;keneanung:&lt;reset&gt; Party announce is now &lt;red&gt;&quot; .. ( keneanung.bashing.announce and &quot;on&quot; or &quot;off&quot;) .. &quot;&lt;reset&gt;.\n&quot;)</script>
