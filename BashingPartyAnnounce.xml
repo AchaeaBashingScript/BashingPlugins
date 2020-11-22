@@ -5,8 +5,22 @@
     <TimerPackage/>
     <AliasPackage>
         <Alias isActive="yes" isFolder="no">
+			<name>announce one target</name>
+			<script>if keneanung.bashing.targetList[1] then 
+  send("pt Target changed to " .. keneanung.bashing.targetList[1].id ,false)
+else 
+  send("pt Target changed to none")
+end</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^ptarg$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
             <name>toggle party announce</name>
             <script>keneanung.bashing.announce = not keneanung.bashing.announce
+if keneanung.bashing.announce then
+  send("pt I am calling targets, focus your fire on my command.",false)
+end
 cecho(&quot;&lt;green&gt;keneanung:&lt;reset&gt; Party announce is now &lt;red&gt;&quot; .. ( keneanung.bashing.announce and &quot;on&quot; or &quot;off&quot;) .. &quot;&lt;reset&gt;.\n&quot;)</script>
             <command></command>
             <packageName></packageName>
