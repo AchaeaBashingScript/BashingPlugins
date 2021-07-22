@@ -38,3 +38,9 @@ prependAttackQueue.lua
 
 - allows the user to specify a queue of commands to be run before the next attack on svo systems
 - add new commands to that queue with the function `keneanung.bashing.addFirst(what)`
+
+Autobasher.xml
+----------------------
+
+- automatically hits targets as soon as `keneanung.bashing.targetList` gets populated with new targets (like upon walking or as monster enters the room). It does **NOT** automatically walks and bash around without the user's input.
+- toggle it on/off by using `kb auto` or `kconfig bashing auto`.
