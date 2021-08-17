@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage />
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>Eri Auto-Basher</name>
+			<script></script>
+			<command></command>
+			<packageName>Eri Auto-Basher</packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>Auto-basher toggle</name>
+				<script>keneanung.bashing.autobashing = not keneanung.bashing.autobashing
+cecho("&lt;green&gt;keneanung:&lt;reset&gt; Auto-bashing is now &lt;red&gt;" .. ( keneanung.bashing.autobashing and "on" or "off") .. "&lt;reset&gt;.\n")</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^kb auto|kconfig bashing auto$</regex>
+			</Alias>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>Eri Auto-Basher</name>
+			<packageName></packageName>
+			<script></script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>Autobasher</name>
+				<packageName></packageName>
+				<script>function Autobasher()
+  if not keneanung.bashing.configuration.enabled then return end
+  
+	if keneanung.bashing.autobashing then
+    if #keneanung.bashing.targetList &gt; 0 then
+      if keneanung.bashing.attacking == 0 then
+  			keneanung.bashing.attackButton()
+  	  end
+		end
+	end
+end</script>
+				<eventHandlerList>
+					<string>keneanung.bashing.targetList.changed</string>
+				</eventHandlerList>
+			</Script>
+		</ScriptGroup>
+	</ScriptPackage>
+	<KeyPackage />
+</MudletPackage>
